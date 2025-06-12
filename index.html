@@ -1,0 +1,345 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
+     <title>Responsive Portfolio Website</title>
+     <link rel="stylesheet" href="style.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- Edit your name and logo here -->
+   <header class="header">
+      <a href="#home" class="logo">Abrar
+      <span>Ahmad</span></a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+   </header>
+      
+    <!-- HOME SECTION (Edit your intro, profession, and social links) -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, I'm <span>Abrar Ahmad</span></h1>
+        <h3 class="text-animation" id="typing"></h3>
+        <script>
+            const text = "Network & System Security Engineer";
+            const typingElement = document.getElementById("typing");
+            let i = 0;
+
+            function typeWriter() {
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+            } else {
+                setTimeout(() => {
+                typingElement.innerHTML = "";
+                i = 0;
+                setTimeout(typeWriter, 300); // slight pause before restarting
+                }, 3000);
+            }
+            }
+            typeWriter();
+        </script>
+        <p>
+          Experienced Network and System Security Engineer with a strong background in designing, implementing, and maintaining secure IT infrastructures. Skilled in firewalls, intrusion detection/prevention, vulnerability assessment, and incident response. Passionate about protecting organizations from cyber threats and ensuring business continuity.
+        </p>
+        <!-- SOCIAL MEDIA ICONS: Add your real profile links below -->
+        <div class="social-icons">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/abrarahmad" target="_blank">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/abrarahmad" target="_blank">
+            <i class='bx bxl-github'></i>
+          </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com/abrarahmad" target="_blank">
+            <i class='bx bxl-instagram'></i>
+          </a>
+          <!-- Twitter -->
+          <a href="https://twitter.com/abrarahmad" target="_blank">
+            <i class='bx bxl-twitter'></i>
+          </a>
+        </div>
+        <!-- BUTTON GROUP: Hire (left), Contact (right) -->
+        <div class="btn-group">
+          <a href="mailto:abrar.ahmad@email.com" class="btn">Hire</a>
+          <!-- Updated Contact button to open your email -->
+          <a href="mailto:syedulabrar@proton.me" class="btn" style="border: 2px solid cyan; color: cyan; background: transparent;">Contact</a>
+        </div>
+      </div>
+      <!-- Add your image here. Make sure 'image.jpg' is in your project folder -->
+      <div class="home-img">
+        <img src="image.jpg" alt="Abrar Ahmad">
+      </div>
+    </section>
+              
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="education" id="education">
+      <h2 class="heading">Education</h2>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2015 - 2019</div>
+          <div class="timeline-content">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>National University of Computer and Emerging Sciences (FAST-NUCES), Pakistan</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2022</div>
+          <div class="timeline-content">
+            <h3>Master of Science in Information Security</h3>
+            <p>COMSATS University Islamabad, Pakistan</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <h3>Certified Information Systems Security Professional (CISSP)</h3>
+            <p>International Information System Security Certification Consortium (ISC)²</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021</div>
+          <div class="timeline-content">
+            <h3>Cisco Certified Network Associate (CCNA)</h3>
+            <p>Cisco</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+<section class="services" id="services">
+  <h2 class="heading" style="font-size: 7em;">Services</h2>
+  <div class="services-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Row 1 -->
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Network Security</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Design and implement secure network architectures, configure firewalls, VPNs, and intrusion detection/prevention systems to protect against cyber threats.
+        </p>
+      </div>
+    </div>
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.7em; margin-bottom: 2px;">System Hardening</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Secure operating systems and servers by applying best practices, patch management, and vulnerability mitigation techniques.
+        </p>
+      </div>
+    </div>
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Penetration Testing & Vulnerability Assessment</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Conduct penetration tests and vulnerability assessments to identify and remediate security weaknesses in IT infrastructure.
+        </p>
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Incident Response & Forensics</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Develop incident response plans, investigate security breaches, and perform digital forensics to minimize impact and prevent future incidents.
+        </p>
+      </div>
+    </div>
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Cloud Security</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Secure cloud environments by configuring access controls, monitoring, and compliance for AWS, Azure, and other cloud platforms.
+        </p>
+      </div>
+    </div>
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Security Awareness Training</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Educate employees on cybersecurity best practices to reduce risks from phishing, social engineering, and insider threats.
+        </p>
+      </div>
+    </div>
+    <!-- Row 2, last box -->
+    <div class="service-box" style="flex: 1 1 300px; min-width: 260px; max-width: 340px; box-sizing: border-box;">
+      <div class="service-info" style="padding: 16px;">
+        <h4 style="font-size: 0.85em; margin-bottom: 8px;">Compliance & Risk Management</h4>
+        <p style="font-size: 0.95em; overflow-wrap: break-word; margin: 0; max-height: 60px; overflow: auto; line-height: 1.3;">
+          Assist organizations in achieving compliance with standards like ISO 27001, GDPR, and PCI DSS through risk assessments and policy development.
+        </p>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media (min-width: 900px) {
+      .services-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+      .service-box {
+        flex: 1 1 300px !important;
+        min-width: 260px !important;
+        max-width: 340px !important;
+      }
+      .services-container > .service-box {
+        margin-bottom: 0 !important;
+      }
+      .services-container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 900px) {
+      .services-container {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      .service-box {
+        width: 90% !important;
+        min-width: 220px !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</section>
+
+</section>
+    
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-box">
+        <h2 class="heading">Testimonials</h2>
+        <div class="wrapper">
+        <div class="testimonial-item">
+            <img src="client1.jpg" alt="Client 1">
+            <h2>Ali Raza</h2>
+            <div class="rating">
+                <i class='bx bxs-star' id="star"></i>
+                <i class='bx bxs-star' id="star"></i>
+                <i class='bx bxs-star' id="star"></i>
+                <i class='bx bxs-star' id="star"></i>
+                <i class='bx bxs-star' id="star"></i>
+            </div>
+            <p class="testimonial-text" style="font-size: 1.7em;">"Abrar's expertise in network security helped us secure our infrastructure and pass our compliance audit with ease."</p>
+        </div>
+          <div class="testimonial-item">
+            <img src="client2.jpg" alt="Client 2">
+            <h2>Sara Khan</h2>
+            <div class="rating">
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+            </div>
+            <p class="testimonial-text">"Professional, reliable, and always up-to-date with the latest security trends. Highly recommended!"</p>
+          </div>
+          <div class="testimonial-item">
+            <img src="client3.jpg" alt="Client 3">
+            <h2>Mohammad Usman</h2>
+            <div class="rating">
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+              <i class='bx bxs-star' id="star"></i>
+            </div>
+            <p class="testimonial-text">"Abrar provided excellent penetration testing services and helped us fix critical vulnerabilities."</p>
+          </div>
+        </div>
+      </div>
+      <style>
+        .testimonial-text {
+          font-size: 1.35em;
+          font-weight: bold;
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+          text-align: center;
+          margin: 18px 0 0 0;
+        }
+        .testimonial-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (max-width: 700px) {
+          .testimonial-text {
+            font-size: 1.25em !important;
+            font-weight: bold !important;
+            width: 100% !important;
+            text-align: center !important;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <!-- Updated form action to your Proton Mail address -->
+      <form action="mailto:syedulabrar@proton.me" method="POST" enctype="text/plain">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="input-box">
+            <input type="tel" placeholder="Phone Number">
+            <input type="text" placeholder="Subject">
+          </div>
+        </div>
+        <div class="input-group-2">
+          <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Send Message" class="btn"> 
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer class="footer">
+      <div class="social" style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+        <a href="https://linkedin.com/in/abrarahmad" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #222; color: #fff; font-size: 22px;">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/abrarahmad" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #222; color: #fff; font-size: 22px;">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://instagram.com/abrarahmad" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #222; color: #fff; font-size: 22px;">
+          <i class='bx bxl-instagram'></i>
+        </a>
+        <a href="https://twitter.com/abrarahmad" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #222; color: #fff; font-size: 22px;">
+          <i class='bx bxl-twitter'></i>
+        </a>
+      </div>
+      <ul class="list">
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#home">About me</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+      <p class="copyright">@ Abrar Ahmad | All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
